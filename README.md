@@ -15,7 +15,7 @@ A **School** is an institution for learning, and you are going to create a **Jav
 
 ---
 
-## 🧑‍🎓 Class: `Student`
+## 🧑‍🎓 Class: `se.lexicon.Student`
 
 ### Attributes:
 - `id`: `String`
@@ -26,7 +26,7 @@ A **School** is an institution for learning, and you are going to create a **Jav
 ### Diagram:
 ```
 +---------------------+
-|      Student        |
+|      se.lexicon.Student        |
 +---------------------+
 | - id: String        |
 | - name: String      |
@@ -37,45 +37,45 @@ A **School** is an institution for learning, and you are going to create a **Jav
 
 ---
 
-## 📘 Class: `Course`
+## 📘 Class: `se.lexicon.Course`
 
 ### Attributes:
 - `id`: `String`
 - `courseName`: `String`
 - `startDate`: `LocalDate`
 - `weekDuration`: `int`
-- `students`: `List<Student>`
+- `students`: `List<se.lexicon.Student>`
 
 ### Methods:
-- `register(Student student)`
-- `unregister(Student student)`
+- `register(se.lexicon.Student student)`
+- `unregister(se.lexicon.Student student)`
 
 ### Diagram:
 ```
 +------------------------------+
-|            Course           |
+|            se.lexicon.Course           |
 +------------------------------+
 | - id: String                |
 | - courseName: String        |
 | - startDate: LocalDate      |
 | - weekDuration: int         |
-| - students: List<Student>   |
+| - students: List<se.lexicon.Student>   |
 +------------------------------+
-| + register(Student)         |
-| + unregister(Student)       |
+| + register(se.lexicon.Student)         |
+| + unregister(se.lexicon.Student)       |
 +------------------------------+
 ```
 
 ### Class Diagram:
 ![model.jpeg](img%2Fmodel.jpeg)
 
-> **Note**: Each course can have many students. This relationship is managed from the `Course` class.
+> **Note**: Each course can have many students. This relationship is managed from the `se.lexicon.Course` class.
 
 ---
 
 ## 📦 Structure Requirement
-Course and Student objects should be stored in collections you decide. Its common that you separate
-your data access in a separate package away from the business logic. Your Student and Course
+se.lexicon.Course and se.lexicon.Student objects should be stored in collections you decide. Its common that you separate
+your data access in a separate package away from the business logic. Your se.lexicon.Student and se.lexicon.Course
 collections should be stored inside Data Access Objects, so called DAO’s. The DAO classes only
 concern should be to create, read, update and remove objects from the collections.
 
@@ -88,7 +88,7 @@ concern should be to create, read, update and remove objects from the collection
 > **Make your Dao classes implement** the methods from the interfaces above.
 
 ### Methods Explanation:
-- Student save(Student student) and Course save(Course course) should add objects to the collection and return the same object back.
+- se.lexicon.Student save(se.lexicon.Student student) and se.lexicon.Course save(se.lexicon.Course course) should add objects to the collection and return the same object back.
 - The find methods should find and return object(s) matching the search criteria.  
 - The delete methods should remove matching object from the collection.
 
